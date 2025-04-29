@@ -31,15 +31,9 @@ pipeline {
             {
                 echo 'Testing stage'
                 sh 'test -f build/index.html'
+                sh 'npm test'
             }
             
-        }
-    }
-    post
-    {
-        success
-        {
-            archiveArtifacts artifacts: 'build/**'
         }
     }
 }
