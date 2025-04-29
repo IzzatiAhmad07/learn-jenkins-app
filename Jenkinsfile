@@ -23,6 +23,10 @@ pipeline {
                     ls -la
                 '''
             }
+        stage('Test')
+        {
+            echo 'Testing stage'
+        }
         }
     }
 }
