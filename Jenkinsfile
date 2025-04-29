@@ -1,4 +1,5 @@
-pipeline {
+pipeline 
+{
     agent any
 
     stages 
@@ -41,7 +42,6 @@ pipeline {
                 sh 'test -f build/index.html'
                 sh 'npm test'
             }
-            
         }
         stage('E2E')
         {
