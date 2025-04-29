@@ -58,7 +58,7 @@ pipeline
                 sh 'npm install -g serve'
                 sh 'node_modules/.bin/serve -s build &'
                 sleep(10)
-                sh 'npx playwright test'
+                sh 'npx playwright test --reporter=html'
             }
         }
     }
