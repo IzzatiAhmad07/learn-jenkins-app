@@ -30,6 +30,7 @@ pipeline {
             steps
             {
                 echo 'Testing stage'
+                test -f $index.html
             }
             
         }
