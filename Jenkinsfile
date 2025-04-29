@@ -55,7 +55,7 @@ pipeline
             steps
             {
                 sh 'npm install -g serve'
-                sh 'node_modules/.bin/serve -s build'
+                sh 'serve -s build'
                 sh 'npx playwright test'
             }
         }
