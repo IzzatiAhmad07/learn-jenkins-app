@@ -26,7 +26,11 @@ pipeline
                 '''
             }
         }
-        stage('Test')
+        stage('Run Tests')
+        {
+            parallel
+            {
+            stage('Test')
         {
             agent
             {
@@ -61,6 +65,9 @@ pipeline
                 sh 'npx playwright test --reporter=html'
             }
         }
+            }
+        }
+        
     }
     post
     {
