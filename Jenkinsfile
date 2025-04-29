@@ -1,7 +1,8 @@
 pipeline {
     agent any
 
-    stages {
+    stages 
+    {
         stage('Build') 
         {
             agent
@@ -23,10 +24,10 @@ pipeline {
                     ls -la
                 '''
             }
+        }
         stage('Test')
         {
             echo 'Testing stage'
-        }
         }
     }
 }
