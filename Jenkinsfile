@@ -59,7 +59,6 @@ pipeline {
                 sh 'serve -s build'
                 sh 'npx playwright test'
             }
-            
         }
     }
 
